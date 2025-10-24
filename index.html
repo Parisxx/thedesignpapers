@@ -3,11 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>The Design Papers</title>
+    <!-- "Sora", sans-serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+    <!-- "Source Serif 4", serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+
+    <!-- Navbar -->
+    <div class="hero-container">
+        <nav class="navbar">
+            <div class="logo-text">The design papers</div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="artikelen-overzicht.html">Artikelen</a></li>
+            </ul>
+        </nav>
+
+      <img src="img/hero.png" alt="A girl with bubbles" class="hero-image"/>
+    </div>
+
+    <!-- Print edition section -->
+    <section class="print-edition">
+        <div class="print-image">
+            <img src="img/magazines.png" alt="Stapels magazines">
+        </div>
+
+        <div class="print-content">
+            <h2>Koop de fysieke editie</h2>
+            <p>
+            Beleef the design papers in print een fysieke ode aan creativiteit, vorm en visie.
+            Voor wie design niet alleen wil zien, maar ook voelen.
+            </p>
+            <a class="buy-button">Koop nu</a>
+        </div>
+    </section>
+
+    <!-- Over ons -->
+    <div class="over-ons">
+        <h1>Over ons</h1>
+        <p> Bij The design papers vieren we creativiteit in al haar vormen. Van baanbrekend grafisch ontwerp 
+            tot inspirerende interieurtrends, wij brengen de verhalen, ideeën en makers achter het mooiste 
+            design rechtstreeks naar jou. Laat je inspireren, ontdek nieuwe perspectieven en duik in de wereld 
+            van design zoals nooit tevoren.
+        </p>
+    </div>
+
+    <!-- Quote -->
+    <div class="quote-homepage">
+        <p>“A girl should be two things: who and what she wants.”<span class="alt-font"> -Coco Chanel</span></p>
+    </div>
+
+    <!-- Text with foto -->
+    <div class="design-text">
+        <img src="img/lady-home.png" alt="a skecth of the girl with a pearl">
+        <p>Ontdek de wereld van design door de ogen van vrouwen die grenzen verleggen. Van schets tot meesterwerk, 
+            van concept tot uitvoering: wij vieren creativiteit, lef en eigenzinnigheid in elke lijn en kleur. 
+            Laat je inspireren, leer nieuwe technieken en vind verhalen die jouw creatieve geest voeden.</p>
+    </div>
+
+    <!-- Newsletter subscription -->
+    <section class="newsletter">
+        <h2>Subscribe to our newsletter!</h2>
+        <p>Be the first to get exclusive offers and the latest news.</p>
+        <form>
+            <input type="email" placeholder="Enter your e-mail address" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Featured articles -->
+    <section class="articles">
+        <h2>Uitgelichte artikelen</h2>
+
+        <div class="cards">
+            <article class="card">
+                <img src="img/lady-home.png" alt="Vrouw met laptop in creatieve werkruimte">
+                <div class="overlay">
+                    <h3>Hoe ziet de ideale werkruimte eruit om creatief te zijn?</h3>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="img/lady-home.png" alt="Kleuren en vormen">
+                <div class="overlay">
+                    <h3>Hoe beïnvloeden kleuren en vormen emoties en gedachten?</h3>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="img/lady-home.png" alt="Illustratie van vrouw">
+                <div class="overlay">
+                    <h3>Hoe beïnvloeden kleuren, vormen en stijl gevoelens van vrouwen?</h3>
+                </div>
+            </article>
+        </div>
+
+        <a href="artikelen-overzicht.html" class="all-articles">Alle artikelen
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+            </svg>
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-social">
+            <h2 class="footer-heading-large">Social media</h2>
+            <ul class="social-list">
+            <li><a href="#"><img src="img/youtube.png" alt="YouTube logo" class="social-icon"> YouTube</a></li>
+            <li><a href="#"><img src="img/instagram.png" alt="Instagram logo" class="social-icon"> Instagram</a></li>
+            <li><a href="#"><img src="img/facebook.png" alt="Facebook logo" class="social-icon"> Facebook</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h2 class="footer-heading-large">Contact</h2>
+            <p class="footer-text-small">
+            <span>128 Willowbrook Avenue</span>
+            <span>Manchester, United Kingdom</span>
+            <a href="mailto:thedesignpapers-contact@gmail.com">thedesignpapers-contact@gmail.com</a>
+            </p>
+        </div>
+
+        <div class="footer-legal">
+            <h2 class="footer-heading-large">Legal</h2>
+            <p class="footer-text-small">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms and Conditions</a>
+            <span>© 2025 The Design Papers. All rights reserved.</span>
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="javascript.js"></script>
 </body>
 </html>

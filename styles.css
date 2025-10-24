@@ -1,3 +1,526 @@
-body{
-    background-color: F3F2F7;
+body {
+  margin: 0;
+  font-family: "Source Serif 4", serif;
+  background-color: #F3F2F7;
+  overflow-x: hidden;
+}
+
+.hero-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-container img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.navbar {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  z-index: 10;
+}
+
+.logo-text {
+  font-size: 48px;
+  color: white;
+}
+
+
+.hamburger {
+  position: absolute;
+  right: 6rem;
+  top: 1.5rem;
+  padding: 0.5rem 0.7rem;
+  border-radius: 2rem; 
+  cursor: pointer;
+}
+
+.hamburger svg {
+  width: 3.5rem;
+  height: 3.5rem;
+  color: white;
+  display: block;
+}
+
+
+.nav-links {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 15%;
+  height: 20vh;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  transition: right 0.4s ease;
+  z-index: 20;
+  border-radius: 10px 0 0 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 6%;
+}
+
+.nav-links.open {
+  right: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #7B7876;
+  font-size: 36px;
+  font-family: "Sora", sans-serif;
+}
+
+.nav-links a:hover {
+  color: #5b5958;
+}
+
+.nav-links li a.active {
+  color: #000;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+#nav-links > svg {
+  width: 30px;  
+  height: 30px; 
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+
+.print-edition {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 10px;
+  display: flex; 
+  overflow: hidden; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 5rem;
+}
+
+.print-image {
+  flex: 1; 
+}
+
+.print-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.print-content {
+  flex: 1; 
+  background-color: #F3BDD8;
+  padding: 4rem 3rem;
+  color: #856d79;
+
+}
+
+.print-content h2 {
+  font-size: 21px;
+  font-weight: bold;
+  color: #C94C8A;
+  margin-bottom: 1.5rem;
+  font-family: "Sora", sans-serif;
+  text-align: center;
+}
+
+.print-content p {
+  font-size: 21px;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  font-family: "Source Serif 4", serif;
+}
+
+.buy-button {
+  background-color: #C94C8A;
+  color: white;
+  font-size: 21px;
+  font-family: "Sora", sans-serif;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  transition: all 0.2s ease-in-out;
+  width: 230px;  
+  display: block;     
+  margin: 0 auto;     
+  text-align: center;   
+}
+
+
+.buy-button:hover {
+  background-color: #9d4771;
+  transform: translateY(-2px);
+}
+
+.over-ons {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.over-ons h1 {
+  font-size: 32px;
+  margin-bottom: 1.5rem;
+  font-family: "Sora", sans-serif;
+  color: #C94C8A;
+}
+
+.over-ons p {
+  font-size: 21px;
+  line-height: 1.6;
+  font-family: "Source Serif 4", serif;
+}
+
+.over-ons p::first-letter {
+  font-size: 32px; 
+  color: #C94C8A; 
+  line-height: 1;    
+}
+.quote-homepage{
+  max-width: 1000px;
+  margin: 0 auto;
+  font-size: 40px;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  color: #EDBB4D;
+}
+
+.quote-homepage p{
+  font-family: "sora", sans-serif;
+}
+
+.quote-homepage p .alt-font{
+  font-family: "Source Serif 4", serif;
+}
+
+.design-text {
+  display: flex;               
+  align-items: flex-start;
+  max-width: 1000px;           
+  margin: 4rem auto;           
+  gap: 2rem;                   
+}
+
+.design-text img {
+  flex: 1;                     
+  max-width: 50%;               
+  height: auto;                
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.design-text p {
+  flex: 1;                     
+  font-family: "Source Serif 4", serif;
+  font-size: 21px;
+  line-height: 1.6;
+               
+}
+
+.newsletter {
+  text-align: center;
+  background-color: #F3BDD8;
+  padding: 30px 20px;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+}
+
+.newsletter h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #C94C8A;
+  margin-bottom: 30px;
+  font-family: "sora", sans-serif;
+}
+
+.newsletter p {
+  font-size: 21px;
+  color: #856d79;
+  font-family: "Source Serif 4", serif;
+  margin-bottom: 30px;
+}
+
+.newsletter form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newsletter input {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 50px;
+  width: 547px;
+  font-size: 21px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.newsletter button {
+  background-color: #b95485;
+  color: white;
+  border: none;
+  font-size: 21px;
+  font-family: "Sora", sans-serif;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  transition: all 0.2s ease-in-out;
+  width: 230px;  
+}
+
+.newsletter button:hover {
+  background-color: #9d4771;
+  transform: translateY(-2px);
+}
+
+.articles {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.articles h2 {
+  font-size: 32px;
+  color: #C94C8A;
+  margin-bottom: 30px;
+  font-family: "Sora", sans-serif;
+}
+
+.cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  width: 370px;
+  height: 425px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+  cursor: pointer;
+  transition: box-shadow 0.4s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 60%);
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.overlay h3 {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1.4;
+  font-family: "Sora", sans-serif;
+}
+
+.overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  border-radius: 12px;
+  z-index: -1;
+}
+
+.card:hover .overlay {
+  align-items: center;
+  padding: 0 20px;
+}
+
+.card:hover .overlay::after {
+  opacity: 1;
+}
+
+.all-articles {
+  display: inline-flex;         
+  align-items: center;  
+  margin-top: 30px;
+  margin-bottom: 80px;
+  font-size: 21px;
+  color: black;
+  text-decoration: none;
+  font-family: "Source Serif 4", serif;
+}
+
+.all-articles svg {
+  width: 24px;  
+  height: 24px;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #C94C8A;
+    padding:40px 100px;
+  color: #EDBB4D;
+  font-family: "Source Serif 4", serif;
+}
+
+.footer-heading-large {
+  font-family: "Sora", sans-serif;
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.footer-text-small {
+  font-size: 21px;
+  line-height: 1.4;
+}
+
+.footer-contact .footer-text-small,
+.footer-legal .footer-text-small {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.social-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-list li {
+  margin-bottom: 12px;
+  font-size: 21px;
+  display: flex;
+  align-items: center;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.site-footer a {
+  color: #EDBB4D;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Artickel overzicht pagina */
+
+
+.new-navbar .new-logo-text {
+  color: #C94C8A;
+}
+
+.new-navbar .new-hamburger svg {
+  color: #C94C8A;
+}
+
+.new-hero-container {
+    position: relative;
+  height: 15vh;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 1190px;
+  margin: 80px auto 30px;
+}
+
+.header-title {
+  color: #C94C8A;
+  font-size: 32px;
+  font-family: "Sora", sans-serif;
+}
+
+.header-search {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  width: 665px;
+  color: black;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  flex: 1;
+}
+
+.search-box .icon {
+  width: 20px;
+  height: 20px;
+  color: black;
+  margin-right: 6px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  padding: 10px 6px;
+  font-size: 21px;
+  width: 100%;
+  color: black;
+}
+
+.search-box input::placeholder {
+  color: black;
+}
+
+.filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: white;
+  border: none;
+  padding: 10px 14px;
+  font-size: 21px;
+  color: black;
+}
+
+.filter-btn .icon {
+  width: 20px;
+  height: 20px;
+  color: black;
 }
